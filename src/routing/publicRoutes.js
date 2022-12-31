@@ -9,11 +9,8 @@ import Product from '../screens/Product'
 import RegistSuccess from '../screens/Regist/RegistSuccess'
 import Cart from '../screens/Cart'
 import Payment from '../screens/Payment'
-<<<<<<< HEAD
-=======
 import PaymentSuccess from '../screens/Payment/PaymentSuccess'
 import PaymentFailed from '../screens/Payment/PaymentFailed'
->>>>>>> 215b17c (update)
 
 export const publicRoutes = [
     {
@@ -86,8 +83,6 @@ export const publicRoutes = [
             tabBarButton: (props) => null,
         },
     },
-<<<<<<< HEAD
-=======
     {
         name: 'PaymentSuccess',
         component: PaymentSuccess,
@@ -102,5 +97,4 @@ export const publicRoutes = [
             tabBarButton: (props) => null,
         },
     },
->>>>>>> 215b17c (update)
 ]
