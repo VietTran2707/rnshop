@@ -4790,9 +4790,9 @@
   "version" "1.0.1"
 
 "json5@^2.2.1":
-  "integrity" "sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA=="
-  "resolved" "https://registry.npmjs.org/json5/-/json5-2.2.1.tgz"
-  "version" "2.2.1"
+  "integrity" "sha512-46Tk9JiOL2z7ytNQWFLpj99RZkVgeHf87yGQKsIkaPz1qSH9UczKH1rO7K3wgRselo0tYMUNfecYpm/p1vC7tQ=="
+  "resolved" "https://registry.npmjs.org/json5/-/json5-2.2.2.tgz"
+  "version" "2.2.2"
 
 "jsonfile@^2.1.0":
   "integrity" "sha512-PKllAqbgLgxHaj8TElYymKCAgrASebJrWpTnEkOaTowt23VKXXN0sUeriJ+eh7y6ufb/CC5ap11pz71/cM0hUw=="
@@ -6062,14 +6062,11 @@
   "resolved" "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.70.3.tgz"
   "version" "0.70.3"
 
-<<<<<<< HEAD
-=======
 "react-native-image-picker@^4.10.3":
   "integrity" "sha512-gLX8J6jCBkUt6jogpSdA7YyaGVLGYywRzMEwBciXshihpFZjc/cRlKymAVlu6Q7HMw0j3vrho6pI8ZGC5O/FGg=="
   "resolved" "https://registry.npmjs.org/react-native-image-picker/-/react-native-image-picker-4.10.3.tgz"
   "version" "4.10.3"
 
->>>>>>> 215b17c (update)
 "react-native-reanimated@^2.13.0":
   "integrity" "sha512-yUHyYVIegWWIza4+nVyS3CSmI/Mc8kLFVHw2c6gnSHaYhYA4LeEjH/jBkoMzHk9Xd0Ra3cwtjYKAMG8OTp6JVg=="
   "resolved" "https://registry.npmjs.org/react-native-reanimated/-/react-native-reanimated-2.13.0.tgz"
