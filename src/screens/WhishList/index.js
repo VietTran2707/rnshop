@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import Layout from '../../components/layout/Layout';
-import Navbar from '../../components/navbar';
+import Layout2 from '../../components/layout/Layout2';
 import GLOBALS from '../../constants/GLOBALS';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather'
@@ -54,8 +53,7 @@ const WhishList = ({ navigation }) => {
 
     return (
         data &&
-        <Layout>
-            <Navbar title='Whish List' showBack={true} />
+        <Layout2 title='Whish List' showBack={true}>
             <FlatList
                 style={{ marginHorizontal: 20, marginTop: 20 }}
                 showsVerticalScrollIndicator={false}
@@ -63,7 +61,7 @@ const WhishList = ({ navigation }) => {
                 renderItem={WhishItem}
                 keyExtractor={item => item.id}
             />
-        </Layout>
+        </Layout2>
     );
 };
 

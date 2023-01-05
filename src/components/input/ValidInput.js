@@ -5,10 +5,10 @@ import GLOBALS from '../../constants/GLOBALS';
 import Feather from 'react-native-vector-icons/Feather'
 
 
-const UIInput = ({ placeholder, mt, name, width, control }) => {
+const UIInput = ({ placeholder, mt, name, value, width, control }) => {
     const { field } = useController({
         control,
-        defaultValue: '',
+        defaultValue: value ? value : '',
         name,
     })
     return (

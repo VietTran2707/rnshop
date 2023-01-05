@@ -10,7 +10,7 @@ const MainStack = () => {
 
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName='Main' screenOptions={{ headerShown: false }}>
+            <Stack.Navigator screenOptions={{ headerShown: false }}>
                 {publicRoutes?.map((route, index) => {
                     const { name, component, options } = route;
                     return (

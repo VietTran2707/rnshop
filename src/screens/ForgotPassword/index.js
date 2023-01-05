@@ -15,7 +15,7 @@ const ForgotPassword = ({ navigation }) => {
         console.log(data);
         // Xử lí xác nhận email để đổi mật khẩu tại đây
 
-        navigation.navigate('ResetPassword')
+        navigation.navigate('ResetPassword', { hasNav: false })
     }
 
     return (

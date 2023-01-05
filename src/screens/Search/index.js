@@ -1,19 +1,17 @@
 import React from 'react';
 import { TextInput, View, StyleSheet, SafeAreaView, ScrollView, FlatList } from 'react-native'
-import Layout from '../../components/layout/Layout';
-import Navbar from '../../components/navbar';
+import Layout2 from '../../components/layout/Layout2';
 import GLOBALS from '../../constants/GLOBALS';
 import ListSearch from '../../components/list_search';
 
 const Search = ({ navigation }) => {
     return (
-        <Layout>
-            <Navbar title={'Search'} showBack />
+        <Layout2 title={'Search'} showBack>
             <View style={styles.container}>
                 <TextInput placeholder='Search' placeholderTextColor={GLOBALS.COLOR.PrimaryText} style={styles.textInput} />
             </View>
             <ListSearch />
-        </Layout>
+        </Layout2>
     );
 };
 

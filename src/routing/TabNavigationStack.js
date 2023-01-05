@@ -8,6 +8,7 @@ const TabNavigationStack = () => {
 
     return (
         <Tab.Navigator
+            initialRouteName='Home'
             screenOptions={{
                 headerShown: false,
                 tabBarActiveTintColor: '#FBF8F2',

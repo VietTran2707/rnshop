@@ -3,8 +3,7 @@ import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux'
 import UIButton from '../../components/button/UIButton';
 import CartItem from '../../components/cart_item';
-import Layout from '../../components/layout/Layout';
-import Navbar from '../../components/navbar';
+import Layout2 from '../../components/layout/Layout2';
 import GLOBALS from '../../constants/GLOBALS'
 import EmptyCard from './EmptyCard';
 
@@ -13,8 +12,7 @@ const Cart = ({ navigation }) => {
     const { listItems, total } = cart
 
     return (
-        <Layout>
-            <Navbar title='Cart' showBack />
+        <Layout2 title='Cart' showBack>
             {
                 listItems.length == 0 ?
                     <EmptyCard />
@@ -44,7 +42,7 @@ const Cart = ({ navigation }) => {
                         </View>
                     )
             }
-        </Layout>
+        </Layout2>
     );
 };
 

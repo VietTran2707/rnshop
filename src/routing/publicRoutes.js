@@ -3,14 +3,17 @@ import Login from '../screens/Login'
 import Welcome from '../screens/Welcome'
 import Regist from '../screens/Regist'
 import ForgotPassword from '../screens/ForgotPassword'
-import ResetPassword from '../screens/ForgotPassword/ResetPassword'
-import SuccessReset from '../screens/ForgotPassword/SuccessReset'
+import ResetPassword from '../components/reset_password/ResetPassword'
+import SuccessReset from '../components/reset_password/SuccessReset'
 import Product from '../screens/Product'
 import RegistSuccess from '../screens/Regist/RegistSuccess'
 import Cart from '../screens/Cart'
 import Payment from '../screens/Payment'
 import PaymentSuccess from '../screens/Payment/PaymentSuccess'
 import PaymentFailed from '../screens/Payment/PaymentFailed'
+import OrderHistory from '../screens/Profile/OrderHistory'
+import HistoryDetail from '../screens/Profile/OrderHistory/HistoryDetail'
+import EditProfile from '../screens/Profile/EditProfile'
 
 export const publicRoutes = [
     {
@@ -93,6 +96,27 @@ export const publicRoutes = [
     {
         name: 'PaymentFailed',
         component: PaymentFailed,
+        options: {
+            tabBarButton: (props) => null,
+        },
+    },
+    {
+        name: 'OrderHistory',
+        component: OrderHistory,
+        options: {
+            tabBarButton: (props) => null,
+        },
+    },
+    {
+        name: 'HistoryDetail',
+        component: HistoryDetail,
+        options: {
+            tabBarButton: (props) => null,
+        },
+    },
+    {
+        name: 'EditProfile',
+        component: EditProfile,
         options: {
             tabBarButton: (props) => null,
         },

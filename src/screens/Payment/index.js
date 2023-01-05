@@ -1,7 +1,6 @@
 import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
 import React, { useEffect, useReducer, useState } from "react";
-import Layout from "../../components/layout/Layout";
-import Navbar from "../../components/navbar";
+import Layout2 from '../../components/layout/Layout2';
 import GLOBALS from "../../constants/GLOBALS";
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import UIButton from "../../components/button/UIButton";
@@ -67,8 +66,7 @@ const Payment = ({ route, navigation }) => {
     }
 
     return (
-        <Layout>
-            <Navbar title='Payment' showBack />
+        <Layout2 title='Payment' showBack>
             <View style={{ flex: 1, marginTop: 20 }}>
                 <ScrollView
                     showsVerticalScrollIndicator={false}
@@ -105,7 +103,7 @@ const Payment = ({ route, navigation }) => {
                     <UIButton title="Confirm Order" onPress={handlePayment} />
                 </View>
             </View>
-        </Layout>
+        </Layout2>
     );
 };
 

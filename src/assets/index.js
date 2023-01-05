@@ -10,7 +10,8 @@ const images = {
     sofa: require("./images/sofa.png"),
     empty: require("./images/empty.png"),
     success: require("./images/success.png"),
-    error: require("./images/error.png")
+    error: require("./images/error.png"),
+    delivering: require("./images/delivering.png")
 }
 
 const icons = {
