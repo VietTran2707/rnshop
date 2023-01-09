@@ -1,5 +1,5 @@
 import React from 'react';
-import { FieldValues, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { registOptions } from '../../constants/Validation';
 import { View, Text, StyleSheet } from 'react-native';
 import UIButton from '../../components/button/UIButton';

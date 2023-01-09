@@ -1,12 +1,15 @@
 import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
+import { useForm } from 'react-hook-form';
 import React, { useEffect, useReducer, useState } from "react";
 import Layout2 from '../../components/layout/Layout2';
 import GLOBALS from "../../constants/GLOBALS";
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import UIButton from "../../components/button/UIButton";
+import ValidInput from "../../components/input/ValidInput"
 import { useSelector } from "react-redux";
 
 const Payment = ({ route, navigation }) => {
+    const { control, handleSubmit, formState: { errors } } = useForm()
     const { items, total, type } = route.params
     /**
      * items: list items truyền từ cart
@@ -36,6 +39,7 @@ const Payment = ({ route, navigation }) => {
     }
 
     const [state, dispatch] = useReducer(reducer, initialState)
+    const [showShipping, setShowShipping] = useState(true)
 
     useEffect(() => {
         switch (type) {
@@ -61,7 +65,8 @@ const Payment = ({ route, navigation }) => {
         }
     }, [])
 
-    const handlePayment = () => {
+    const handlePayment = (data) => {
+        console.log(data);
         navigation.navigate('PaymentFailed')
     }
 
@@ -94,16 +99,19 @@ const Payment = ({ route, navigation }) => {
                             <Text style={styles.textDelivery}>Free</Text>
                         </View>
                     </View>
-                    <TouchableOpacity style={styles.orderContainer}>
+                    <TouchableOpacity style={styles.orderContainer} onPress={() => setShowShipping(!showShipping)}>
                         <Text style={styles.orderText}>Shipping Detail</Text>
-                        <FontAwesome5 name='angle-right' size={20} color={GLOBALS.COLOR.PrimaryText} />
+                        <FontAwesome5 name={showShipping ? 'angle-up' : 'angle-down'} size={20} color={GLOBALS.COLOR.PrimaryText} />
                     </TouchableOpacity>
+                    <View style={[styles.shippingContainer, { display: showShipping ? 'flex' : 'none' }]}>
+                        <ValidInput placeholder='Address' value='445 Nguyễn Trãi' name={'address'} control={control} />
+                    </View>
                 </ScrollView>
                 <View style={styles.buttonContainer}>
-                    <UIButton title="Confirm Order" onPress={handlePayment} />
+                    <UIButton title="Confirm Order" mt onPress={handleSubmit(handlePayment)} />
                 </View>
-            </View>
-        </Layout2>
+            </View >
+        </Layout2 >
     );
 };
 
@@ -148,5 +156,8 @@ const styles = StyleSheet.create({
     buttonContainer: {
         marginHorizontal: 20,
         marginBottom: 20
+    },
+    shippingContainer: {
+        width: '100%'
     }
 })
