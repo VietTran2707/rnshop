@@ -11,14 +11,13 @@ const Profile = ({ navigation }) => {
     /**
      * avatar: set image avatar
      * showPopup: control showpopup
-     * Created: Viet2707
+     
      */
     const [avatar, setAvatar] = useState(null)
     const [showPopup, setShowPopup] = useState(false)
 
     /**
      * Hàm đổi avatar
-     * Created: Viet2707
      */
     const handleChangeAvatar = async () => {
         const options = {
@@ -36,7 +35,7 @@ const Profile = ({ navigation }) => {
      * optionIcon: tên icon
      * name: tên option
      * @returns OptionItem JSX
-     * Created: Viet2707
+     
      */
     const OptionItem = ({ handlePress, optionIcon, name }) => {
         return (
@@ -54,7 +53,7 @@ const Profile = ({ navigation }) => {
 
     /**
      * List option
-     * Created: Viet2707
+     
      */
     const options = [
         {

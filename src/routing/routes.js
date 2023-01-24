@@ -3,6 +3,7 @@ import Home from '../screens/Home'
 import Profile from '../screens/Profile'
 import Search from '../screens/Search'
 import WhishList from '../screens/WhishList'
+import Notification from '../screens/Notification'
 import Feather from 'react-native-vector-icons/Feather';
 import GLOBALS from '../constants/GLOBALS'
 
@@ -34,6 +35,16 @@ export const RouterList = [
         options: {
             tabBarIcon: (props) => {
                 return <Feather name='heart' size={30} color={props.focused ? GLOBALS.COLOR.SecondColor : GLOBALS.COLOR.PrimaryText} />
+            },
+            tabBarShowLabel: false
+        },
+    },
+    {
+        name: 'Notification',
+        component: Notification,
+        options: {
+            tabBarIcon: (props) => {
+                return <Feather name='bell' size={30} color={props.focused ? GLOBALS.COLOR.SecondColor : GLOBALS.COLOR.PrimaryText} />
             },
             tabBarShowLabel: false
         },
