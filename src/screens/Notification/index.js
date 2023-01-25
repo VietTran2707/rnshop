@@ -2,12 +2,14 @@
 
 import React, {useEffect, useState} from 'react';
 import { FlatList, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import  GLOBALS  from '../../constants/GLOBALS';
 import Layout2 from '../../components/layout/Layout2';
+import productApi from '../../api/productApi';
 
 const Notification = ({navigation}) => {
+
     const [data, setData] = useState(null);
+
     useEffect(() => {
         const getData = async () => {
             try {
@@ -17,8 +19,8 @@ const Notification = ({navigation}) => {
                 console.log(error);
             }
         }
-        getData();
-    }, []);
+        getData()
+    })
     
     const NotiItem = ({item}) => {
         return (
@@ -26,17 +28,15 @@ const Notification = ({navigation}) => {
                 style={styles.NotiContainer}
                 onPress = {() => navigation.navigate('Notification', {id : item.id})}
             >
-                <View style={{flex: 0.3}}>
-                    <Image source={{uri: item.image}} style={styles.image} resideMode = 'stretch' />
-                </View>
-                <View style={{flex: 0.7, backgroundColor: 'white', flexDirection: 'row'}}>
+                <View style={{flex: 1, backgroundColor: 'white', flexDirection: 'row'}}>
                     <Text numberOfLines={1} ellipsizeMode='tail' style={styles.title}>{item.name}</Text>
                 </View>
             </TouchableOpacity>
-        );
+        )
     }
 
     return (
+        data &&
         <Layout2 title='Notification' showBack={true}>
             <FlatList
                 style={{marginHorizontal: 20, marginTop: 20}}
