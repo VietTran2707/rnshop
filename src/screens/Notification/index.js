@@ -1,35 +1,46 @@
-//create Notification screen for the app
-
-import React, {useEffect, useState} from 'react';
-import { FlatList, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import  GLOBALS  from '../../constants/GLOBALS';
+import React, { useEffect, useState } from 'react';
+import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Layout2 from '../../components/layout/Layout2';
+import GLOBALS from '../../constants/GLOBALS';
+import Ionicon from 'react-native-vector-icons/Ionicons';
+import Feather from 'react-native-vector-icons/Feather'
 import productApi from '../../api/productApi';
 
-const Notification = ({navigation}) => {
 
-    const [data, setData] = useState(null);
+const Notification = ({ navigation }) => {
+
+    const [data, setData] = useState(null)
 
     useEffect(() => {
         const getData = async () => {
             try {
-                const res = await productApi.getNotification();
-                setData(res);
+                const res = await productApi.getWhishList()
+                setData(res)
             } catch (error) {
                 console.log(error);
             }
         }
         getData()
     })
-    
-    const NotiItem = ({item}) => {
+
+    const NotiItem = ({ item }) => {
         return (
-            <TouchableOpacity 
-                style={styles.NotiContainer}
-                onPress = {() => navigation.navigate('Notification', {id : item.id})}
+            <TouchableOpacity
+                style={styles.notiContainer}
+                onPress={() => navigation.navigate('HistoryDetail', { item, id: item.id })}
             >
-                <View style={{flex: 1, backgroundColor: 'white', flexDirection: 'row'}}>
-                    <Text numberOfLines={1} ellipsizeMode='tail' style={styles.title}>{item.name}</Text>
+                <View style={{ flex: 0.3 }}>
+                    <View style={{ flex: 0.2, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }}>
+                        <Image source={{ uri: item.image }} style={styles.image} resizeMode='center' />
+                    </View>
+                    <View style={{ flex: 0.8, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }}>
+                        <Text style={{ color: GLOBALS.COLOR.PrimaryText, fontSize: 15, fontWeight: 'bold' }}>{item.status}</Text>
+                    </View>
+                </View>
+                <View style={{ flex: 0.7, backgroundColor: 'white', flexDirection: 'row' }}>
+                    <View style={{ flex: 0.7, justifyContent: 'flex-start', padding: 20 }}>
+                        <Text numberOfLines={0} style={styles.title}>{item.name}</Text>
+                    </View>
                 </View>
             </TouchableOpacity>
         )
@@ -39,7 +50,7 @@ const Notification = ({navigation}) => {
         data &&
         <Layout2 title='Notification' showBack={true}>
             <FlatList
-                style={{marginHorizontal: 20, marginTop: 20}}
+                style={{ marginHorizontal: 20, marginTop: 20 }}
                 showsVerticalScrollIndicator={false}
                 data={data}
                 renderItem={NotiItem}
@@ -52,26 +63,23 @@ const Notification = ({navigation}) => {
 export default Notification;
 
 const styles = StyleSheet.create({
-   NotiContainer: {
-        backgroundColor: GLOBALS.COLOR.PrimaryBackground,
+    notiContainer: {
         flexDirection: 'row',
-        marginVertical: 10,
-        borderRadius: 5,
+        marginVertical: 5,
+        borderRadius: 0,
         overflow: 'hidden',
         elevation: 3,
     },
     image: {
         width: '101%',
-        height: '101%',
         backgroundColor: 'white',
         height: undefined,
         aspectRatio: 1,
     },
     title: {
-        borderBottomColor: 'black',
-        borderBottomWidth: 1,
         paddingBottom: 5,
         color: GLOBALS.COLOR.PrimaryText,
+        fontSize: 15,
     },
-});
 
+})
