@@ -5,6 +5,7 @@ import GLOBALS from '../../constants/GLOBALS';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather'
 import productApi from '../../api/productApi';
+import { color } from 'react-native-reanimated';
 
 
 const Notification = ({ navigation }) => {
@@ -23,7 +24,25 @@ const Notification = ({ navigation }) => {
         getData()
     })
 
+
     const NotiItem = ({ item }) => {
+
+        let detail = ''
+        switch (item.status){
+            case 'delivering':
+                detail = 'This product is delivering to you soon'
+                break;
+            case 'delivered':
+                detail = 'This product has been delivered successfully'
+                break;
+            case 'canceled':
+                detail = 'This order has been  canceled'
+                break;
+            default:
+                detail = ''
+                break;
+        }
+
         return (
             <TouchableOpacity
                 style={styles.notiContainer}
@@ -37,9 +56,12 @@ const Notification = ({ navigation }) => {
                         <Text style={{ color: GLOBALS.COLOR.PrimaryText, fontSize: 15, fontWeight: 'bold' }}>{item.status}</Text>
                     </View>
                 </View>
-                <View style={{ flex: 0.7, backgroundColor: 'white', flexDirection: 'row' }}>
-                    <View style={{ flex: 0.7, justifyContent: 'flex-start', padding: 20 }}>
-                        <Text numberOfLines={0} style={styles.title}>{item.name}</Text>
+                <View style={{ flex: 0.7, backgroundColor: 'white', flexDirection: 'column' }}>
+                    <View style={{ padding: 5 }}>
+                        <Text numberOfLines={0} style={styles.status}>{item.status}item status</Text>
+                    </View>
+                    <View>
+                        <Text style={styles.detail}> <Text style={{color: 'green'}}> [{item.name}]</Text> {detail}detail</Text>
                     </View>
                 </View>
             </TouchableOpacity>
@@ -76,10 +98,15 @@ const styles = StyleSheet.create({
         height: undefined,
         aspectRatio: 1,
     },
-    title: {
+    status: {
         paddingBottom: 5,
         color: GLOBALS.COLOR.PrimaryText,
-        fontSize: 15,
+        fontSize: 20,
+        fontWeight: 'bold',
+    },
+    detail: {
+        color: GLOBALS.COLOR.PrimaryText,
+        fontSize: 17,
     },
 
 })
