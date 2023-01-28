@@ -36,7 +36,7 @@ const Notification = ({ navigation }) => {
                 detail = 'This product has been delivered successfully'
                 break;
             case 'canceled':
-                detail = 'This order has been  canceled'
+                detail = 'This order has been canceled'
                 break;
             default:
                 detail = ''
@@ -53,15 +53,15 @@ const Notification = ({ navigation }) => {
                         <Image source={{ uri: item.image }} style={styles.image} resizeMode='center' />
                     </View>
                     <View style={{ flex: 0.8, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }}>
-                        <Text style={{ color: GLOBALS.COLOR.PrimaryText, fontSize: 15, fontWeight: 'bold' }}>{item.status}</Text>
+                        <Text style={{ color: GLOBALS.COLOR.PrimaryText, fontSize: 15, fontWeight: 'bold' }}>{item.name}</Text>
                     </View>
                 </View>
                 <View style={{ flex: 0.7, backgroundColor: 'white', flexDirection: 'column' }}>
                     <View style={{ padding: 5 }}>
-                        <Text numberOfLines={0} style={styles.status}>{item.status}item status</Text>
+                        <Text numberOfLines={0} style={styles.status}>{item.status}</Text>
                     </View>
                     <View>
-                        <Text style={styles.detail}> <Text style={{color: 'green'}}> [{item.name}]</Text> {detail}detail</Text>
+                        <Text style={styles.detail}> <Text style={{color: 'green'}}> [{item.name}]</Text> {detail}</Text>
                     </View>
                 </View>
             </TouchableOpacity>
