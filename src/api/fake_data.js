@@ -12,7 +12,8 @@ export const dataSofa = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: ''
     },
     {
         id: 2,
@@ -27,7 +28,8 @@ export const dataSofa = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: ''
     },
 ];
 
@@ -46,7 +48,8 @@ export const dataChair = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "Sebastian chairs is very comfortable",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: 'delivered'
     },
     {
         id: 4,
@@ -61,7 +64,8 @@ export const dataChair = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "Viet chair is very beautiful",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: 'delivering'
 
     },
     {
@@ -77,7 +81,8 @@ export const dataChair = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: 'delivered'
 
     },
     {
@@ -93,7 +98,8 @@ export const dataChair = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "When you sit on Phuong chair, you are so smart",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: 'canceled'
 
     },
 ]
@@ -112,7 +118,8 @@ export const allData = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: ''
 
     },
     {
@@ -128,7 +135,8 @@ export const allData = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: ''
 
     },
     {
@@ -144,7 +152,8 @@ export const allData = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "Sebastian chairs is very comfortable",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: 'delivered'
 
     },
     {
@@ -160,7 +169,8 @@ export const allData = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "Viet chair is very beautiful",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: 'delivering'
 
     },
     {
@@ -176,7 +186,8 @@ export const allData = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: 'delivered'
 
     },
     {
@@ -192,7 +203,8 @@ export const allData = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "When you sit on Phuong chair, you are so smart",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: 'canceled'
 
     },
 ]
@@ -211,7 +223,8 @@ export const whishData = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "Sebastian chairs is very comfortable",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: 'delivered'
 
     },
     {
@@ -227,7 +240,8 @@ export const whishData = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "Viet chair is very beautiful",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: 'delivering'
 
     },
     {
@@ -243,7 +257,8 @@ export const whishData = [
         colors: ['#859E9D', '#225062', '#A8A7AD'],
         description:
             "When you sit on Phuong chair, you are so smart",
-        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"]
+        sizes: ["100cm x 40cm", "100cm x 50cm", "80cm x 40cm", "80cm x 50cm"],
+        status: 'canceled'
 
     },
 ]
